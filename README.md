@@ -1,7 +1,7 @@
 # Homebrew tap for Photon
 
 ```sh
-brew tap vundyalaavinash/photon
+brew tap heapworks-in/photon
 brew install photon
 ```
 
