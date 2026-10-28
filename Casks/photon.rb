@@ -1,7 +1,7 @@
-# photon: Homebrew cask template; the release workflow fills 0.1.12-alpha.1 and bbfa4d25e3e2f52567bc8475eb5d4d32eb3f4699a2f4319ca0b34e86ff5ef20e.
+# photon: Homebrew cask template; the release workflow fills 0.1.13-alpha.1 and 6a39ed0f5bf0bcbd3a93a1c6feb9a95ae84c87c7c9c37e727fa73a7e0267a413.
 cask "photon" do
-  version "0.1.12-alpha.1"
-  sha256 "bbfa4d25e3e2f52567bc8475eb5d4d32eb3f4699a2f4319ca0b34e86ff5ef20e"
+  version "0.1.13-alpha.1"
+  sha256 "6a39ed0f5bf0bcbd3a93a1c6feb9a95ae84c87c7c9c37e727fa73a7e0267a413"
 
   url "https://github.com/heapworks-in/photon/releases/download/photon-v#{version}/Photon-aarch64.dmg"
   name "Photon"
@@ -14,8 +14,8 @@ cask "photon" do
   binary "#{appdir}/Photon.app/Contents/MacOS/cli", target: "photon"
 
   # Alpha builds aren't notarized yet, so Gatekeeper would refuse to open them.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Photon.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Photon.app"]
   end
 
   zap trash: [
