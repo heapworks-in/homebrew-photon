@@ -1,7 +1,7 @@
-# photon: Homebrew cask template; the release workflow fills 0.1.13-alpha.1 and 6a39ed0f5bf0bcbd3a93a1c6feb9a95ae84c87c7c9c37e727fa73a7e0267a413.
+# photon: Homebrew cask template; the release workflow fills 0.1.14-alpha.1 and dc7d17ebc10aea5be9547a4b9b4d5a8666767f3f33d7cfaefd2305751a4f96e0.
 cask "photon" do
-  version "0.1.13-alpha.1"
-  sha256 "6a39ed0f5bf0bcbd3a93a1c6feb9a95ae84c87c7c9c37e727fa73a7e0267a413"
+  version "0.1.14-alpha.1"
+  sha256 "dc7d17ebc10aea5be9547a4b9b4d5a8666767f3f33d7cfaefd2305751a4f96e0"
 
   url "https://github.com/heapworks-in/photon/releases/download/photon-v#{version}/Photon-aarch64.dmg"
   name "Photon"
